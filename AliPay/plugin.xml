@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="hld.alipay" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>AliPay</name>
+  <js-module name="alipay" src="www/AliPay.js">
+    <clobbers target="alipay"/>
+  </js-module>
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AliPay">
+        <param name="android-package" value="hld.alipay.AliPay"/>
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+      <uses-permission android:name="android.permission.READ_PROFILE"/>
+      <uses-permission android:name="android.permission.READ_CONTACTS"/>
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    </config-file>
+
+    <source-file src="src/android/AliPay.java" target-dir="src/hld/alipay"/>
+    <source-file src="src/android/AuthResult.java" target-dir="src/hld/alipay"/>
+    <source-file src="src/android/PayResult.java" target-dir="src/hld/alipay"/>
+
+    <source-file src="src/android/libs/alipaySdk-20161009.jar" target-dir="libs"/>
+  </platform>
+</plugin>

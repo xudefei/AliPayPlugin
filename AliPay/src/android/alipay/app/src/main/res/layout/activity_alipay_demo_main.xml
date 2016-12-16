@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/alipay_demo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="支付宝支付Demo"
+      android:onClick="aliPay"/>
+
+    <Button
+        android:id="@+id/ali_impower_demo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="支付宝授权Demo"
+      android:onClick="aliImpower"/>
+
+    <Button
+        android:id="@+id/ali_web_to_native_demo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="网页支付转Native Demo"
+      android:onClick="aliWeb2Native"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="重要说明：\n支付宝支付Demo提示“服务器繁忙，请稍后再试。（ALI20247）”是因为支付APP支付功能未签约。"
+        android:textColor="@color/themeColor"
+        android:typeface="serif" />
+</LinearLayout>
